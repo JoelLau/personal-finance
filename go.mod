@@ -3,6 +3,7 @@ module personal-finance
 go 1.25.5
 
 require (
+	github.com/JoelLau/go-csv v0.0.6
 	github.com/stretchr/testify v1.11.1
 	github.com/urfave/cli/v3 v3.6.1
 )
