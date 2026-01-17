@@ -1,0 +1,22 @@
+Account details for:	ACCOUNT_HOLDER_A + ACCOUNT_HOLDER_B ACCOUNT_ID_001
+Available Balance	18,477.16
+Ledger Balance	18,477.16
+				
+Transaction History				
+Transaction date	Value date	Description	Withdrawals(SGD)	Deposits(SGD)
+16/12/2025	16/12/2025	"FAST PAYMENT
+OTHR-Other                        to PERSON_A PAYNOW_ID_001"	6,000.00	
+11/12/25	11/12/25	"PAYMENT/TRANSFER
+PAYR REFERENCE_001                from COMPANY_A BANK_A"		4,811.73
+9/12/25	9/12/25	"BONUS INTEREST
+PRODUCT_BONUS_001"		27.8
+8/12/25	8/12/25	"IBG GIRO
+ITX                               GOV_AGENCY_A        TAX_ID_001"	637.53	
+6/12/25	6/12/25	"FUND TRANSFER
+OTHR - lunch                      to PERSON_B        via PayNow-Mobile"	30	
+5/12/25	5/12/25	"FAST PAYMENT
+OTHR-TRACKING_ID_001              to COMPANY_B via PayNow-UEN"	78.55	
+4/12/25	4/12/25	"GIRO - SALARY
+SALARY                            COMPANY_A"		8,517.00
+3/12/25	3/12/25	"GIRO
+GOV                               GOV_AGENCY_B        OTHR"		100
