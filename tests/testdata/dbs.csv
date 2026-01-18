@@ -1,104 +1,104 @@
-Card Transaction Details For:	CARD_TYPE_A CARD_ID_001
-Transactions as at:	DATE_001
-							
-Credit Limit:	SGD undefined
-Available Limit:	SGD undefined
-							
-Transaction Date	Transaction Posting Date	Transaction Description	Transaction Type	Payment Type	Transaction Status	Debit Amount	Credit Amount
-22 Oct 25	23 Oct 25	MERCHANT_A           SINGAPORE     SG	PURCHASE	Online/In-App Payment	Settled	12.4	
-21 Oct 25	22 Oct 25	MERCHANT_B           SINGAPORE     SG	PURCHASE	Contactless	Settled	9	
-20 Oct 25	22 Oct 25	MERCHANT_C           SINGAPORE     SG	PURCHASE	Contactless	Settled	4.8	
-20 Oct 25	22 Oct 25	MERCHANT_D           SINGAPORE     SG	PURCHASE	Contactless	Settled	14.7	
-20 Oct 25	22 Oct 25	MERCHANT_E           SINGAPORE     SG	PURCHASE	Contactless	Settled	5.5	
-19 Oct 25	23 Oct 25	TRANSIT_PROVIDER_A   SINGAPORE     SG	PURCHASE	Contactless	Settled	3.78	
-19 Oct 25	22 Oct 25	MERCHANT_F           SINGAPORE     SG	PURCHASE	Contactless	Settled	19.4	
-19 Oct 25	21 Oct 25	MERCHANT_G           SINGAPORE     SG	PURCHASE	Contactless	Settled	28.3	
-19 Oct 25	21 Oct 25	RIDE_HAILING_A       SINGAPORE     SG	PURCHASE	Online/In-App Payment	Settled	25.7	
-19 Oct 25	21 Oct 25	GROCERY_CHAIN_A      SINGAPORE     SG	PURCHASE	Contactless	Settled	9.56	
-18 Oct 25	22 Oct 25	TRANSIT_PROVIDER_A   SINGAPORE     SG	PURCHASE	Contactless	Settled	3.46	
-18 Oct 25	21 Oct 25	MERCHANT_H           SINGAPORE     SG	PURCHASE	Contactless	Settled	70.74	
-18 Oct 25	21 Oct 25	GROCERY_CHAIN_A      SINGAPORE     SG	PURCHASE	Contactless	Settled	0.67	
-17 Oct 25	22 Oct 25	TRANSIT_PROVIDER_A   SINGAPORE     SG	PURCHASE	Contactless	Settled	2.78	
-17 Oct 25	21 Oct 25	MERCHANT_I           SINGAPORE     SG	PURCHASE	Contactless	Settled	4	
-17 Oct 25	18 Oct 25	RIDE_HAILING_A       SINGAPORE     SG	PURCHASE	Online/In-App Payment	Settled	12.3	
-16 Oct 25	17 Oct 25	MERCHANT_J           SINGAPORE     SG	PURCHASE	Online/In-App Payment	Settled	89.8	
-16 Oct 25	16 Oct 25	DIGITAL_SERVICE_A    SERVICE_ID_001 IE	PURCHASE	Online/In-App Payment	Settled	10.08	
-15 Oct 25	21 Oct 25	TRANSIT_PROVIDER_A   SINGAPORE     SG	PURCHASE	Contactless	Settled	2.8	
-15 Oct 25	17 Oct 25	GROCERY_CHAIN_A      SINGAPORE     SG	PURCHASE	Contactless	Settled	1	
-15 Oct 25	16 Oct 25	MERCHANT_K           SINGAPORE     SG	PURCHASE	Contactless	Settled	10.9	
-14 Oct 25	18 Oct 25	TRANSIT_PROVIDER_A   SINGAPORE     SG	PURCHASE	Contactless	Settled	1.4	
-13 Oct 25	17 Oct 25	TRANSIT_PROVIDER_A   SINGAPORE     SG	PURCHASE	Contactless	Settled	5.99	
-13 Oct 25	15 Oct 25	E_COMMERCE_A          SINGAPORE     SG	PURCHASE	Online/In-App Payment	Settled	36	
-13 Oct 25	15 Oct 25	E_COMMERCE_A          SINGAPORE     SG	PURCHASE	Online/In-App Payment	Settled	21.37	
-13 Oct 25	14 Oct 25	MICROMOBILITY_A      SINGAPORE     SG	PURCHASE	Online/In-App Payment	Settled	10	
-12 Oct 25	14 Oct 25	GROCERY_CHAIN_A      SINGAPORE     SG	PURCHASE	Contactless	Settled	5.37	
-11 Oct 25	15 Oct 25	TRANSIT_PROVIDER_A   SINGAPORE     SG	PURCHASE	Contactless	Settled	5.77	
-11 Oct 25	14 Oct 25	TELECOM_A             SINGAPORE     SG	PURCHASE	Online/In-App Payment	Settled	25.46	
-11 Oct 25	13 Oct 25	GROCERY_CHAIN_A      SINGAPORE     SG	PURCHASE	Contactless	Settled	10.24	
-10 Oct 25	14 Oct 25	TRANSIT_PROVIDER_A   SINGAPORE     SG	PURCHASE	Contactless	Settled	1.77	
-10 Oct 25	13 Oct 25	MERCHANT_I           SINGAPORE     SG	PURCHASE	Contactless	Settled	4	
-10 Oct 25	11 Oct 25	MERCHANT_L           SINGAPORE     SG	PURCHASE	Contactless	Settled	19.26	
-10 Oct 25	11 Oct 25	MERCHANT_M           SINGAPORE     SG	PURCHASE	Contactless	Settled	3	
-10 Oct 25	11 Oct 25	RIDE_HAILING_A       SINGAPORE     SG	PURCHASE	Online/In-App Payment	Settled	20	
-9 Oct 25	14 Oct 25	TRANSIT_PROVIDER_A   SINGAPORE     SG	PURCHASE	Contactless	Settled	2.78	
-9 Oct 25	10 Oct 25	MERCHANT_N           SINGAPORE     SG	PURCHASE	Contactless	Settled	11.51	
-9 Oct 25	10 Oct 25	MERCHANT_O           SINGAPORE     SG	PURCHASE	Contactless	Settled	54	
-8 Oct 25	13 Oct 25	TRANSIT_PROVIDER_A   SINGAPORE     SG	PURCHASE	Contactless	Settled	3.78	
-8 Oct 25	9 Oct 25	MERCHANT_P           SINGAPORE     SG	PURCHASE	Contactless	Settled	8.4	
-8 Oct 25	9 Oct 25	MERCHANT_C           SINGAPORE     SG	PURCHASE	Contactless	Settled	17.5	
-7 Oct 25	11 Oct 25	TRANSIT_PROVIDER_A   SINGAPORE     SG	PURCHASE	Contactless	Settled	2.38	
-7 Oct 25	9 Oct 25	E_COMMERCE_A          SINGAPORE     SG	PURCHASE	Online/In-App Payment	Settled	21.37	
-7 Oct 25	8 Oct 25	PAYMENT_PLATFORM_A   SINGAPORE     SG	PURCHASE	Online/In-App Payment	Settled	1.75	
-6 Oct 25	10 Oct 25	TRANSIT_PROVIDER_A   SINGAPORE     SG	PURCHASE	Contactless	Settled	5.08	
-6 Oct 25	9 Oct 25	GROCERY_CHAIN_A      SINGAPORE     SG	PURCHASE	Contactless	Settled	3.66	
-6 Oct 25	8 Oct 25	MERCHANT_Q           SINGAPORE     SG	PURCHASE	Contactless	Settled	10.7	
-5 Oct 25	7 Oct 25	MERCHANT_R            CITY_A        MY MYR	PURCHASE	Contactless	Settled	10.69	
-5 Oct 25	6 Oct 25	MERCHANT_S            CITY_B        MY MYR	PURCHASE	Contactless	Settled	6.03	
-5 Oct 25	6 Oct 25	MERCHANT_T            CITY_C        MY MYR	PURCHASE	Contactless	Settled	5.59	
-5 Oct 25	6 Oct 25	RIDE_HAILING_A        CITY_D        MY MYR	PURCHASE	Online/In-App Payment	Settled	6.87	
-4 Oct 25	6 Oct 25	E_WALLET_A            CITY_B        MY MYR	PURCHASE	Online/In-App Payment	Settled	32.05	
-4 Oct 25	6 Oct 25	E_WALLET_A            CITY_B        MY MYR	PURCHASE	Online/In-App Payment	Settled	96.15	
-4 Oct 25	6 Oct 25	RETAIL_CHAIN_A        CITY_B        MY MYR	PURCHASE	Contactless	Settled	2.37	
-4 Oct 25	6 Oct 25	RETAIL_CHAIN_A        CITY_B        MY MYR	PURCHASE	Contactless	Settled	44.49	
-4 Oct 25	6 Oct 25	MERCHANT_U            CITY_B        MY MYR	PURCHASE	Contactless	Settled	4.6	
-3 Oct 25	7 Oct 25	TRANSIT_PROVIDER_A   SINGAPORE     SG	PURCHASE	Contactless	Settled	2.32	
-3 Oct 25	4 Oct 25	RETAIL_CHAIN_B        CITY_E        MY MYR	PURCHASE	Contactless	Settled	4.79	
-3 Oct 25	4 Oct 25	CONVENIENCE_STORE_A  SINGAPORE     SG	PURCHASE	Contactless	Settled	2.94	
-3 Oct 25	4 Oct 25	MERCHANT_V           SINGAPORE     SG	PURCHASE	Contactless	Settled	11.9	
-2 Oct 25	7 Oct 25	TRANSIT_PROVIDER_A   SINGAPORE     SG	PURCHASE	Contactless	Settled	2.8	
-2 Oct 25	4 Oct 25	GROCERY_CHAIN_A      SINGAPORE     SG	PURCHASE	Contactless	Settled	7.95	
-2 Oct 25	3 Oct 25	CLOUD_SERVICE_A      SINGAPORE     SG	PURCHASE	Online/In-App Payment	Settled	0.71	
-1 Oct 25	6 Oct 25	TRANSIT_PROVIDER_A   SINGAPORE     SG	PURCHASE	Contactless	Settled	1.5	
-1 Oct 25	4 Oct 25	GROCERY_CHAIN_A      SINGAPORE     SG	PURCHASE	Contactless	Settled	9.8	
-1 Oct 25	2 Oct 25	MEDICAL_SERVICE_A    SINGAPORE     SG	PURCHASE	Contactless	Settled	79.15	
-30-Sep-25	4 Oct 25	TRANSIT_PROVIDER_A   SINGAPORE     SG	PURCHASE	Contactless	Settled	4.17	
-30-Sep-25	2 Oct 25	HEALTHCARE_A         SINGAPORE     SG	PURCHASE	Contactless	Settled	130.8	
-30-Sep-25	1 Oct 25	MERCHANT_W           SINGAPORE     SG	PURCHASE	Contactless	Settled	1	
-30-Sep-25	1 Oct 25	PAYMENT_PLATFORM_A   SINGAPORE     SG	PURCHASE	Online/In-App Payment	Settled	6.8	
-29-Sep-25	3 Oct 25	TRANSIT_PROVIDER_A   SINGAPORE     SG	PURCHASE	Contactless	Settled	2.8	
-29-Sep-25	1 Oct 25	INSURANCE_A          SINGAPORE     SG	PURCHASE	Online/In-App Payment	Settled	5000	
-28-Sep-25	2 Oct 25	TRANSIT_PROVIDER_A   SINGAPORE     SG	PURCHASE	Contactless	Settled	4.35	
-28-Sep-25	29-Sep-25	MERCHANT_X           SINGAPORE     SG	PURCHASE	Contactless	Settled	128.77	
-28-Sep-25	29-Sep-25	MERCHANT_Y           SINGAPORE     SG	PURCHASE	Contactless	Settled	41.5	
-27-Sep-25	1 Oct 25	TRANSIT_PROVIDER_A   SINGAPORE     SG	PURCHASE	Contactless	Settled	2.69	
-27-Sep-25	30-Sep-25	MERCHANT_Z           SINGAPORE     SG	PURCHASE	Contactless	Settled	4.7	
-27-Sep-25	29-Sep-25	FINTECH_A            SINGAPORE     SG	PURCHASE	Online/In-App Payment	Settled	7	
-27-Sep-25	29-Sep-25	MEDICAL_SERVICE_A    SINGAPORE     SG	PURCHASE	Contactless	Settled	95.9	
-26-Sep-25	29-Sep-25	GROCERY_CHAIN_B      SINGAPORE     SG	PURCHASE	Contactless	Settled	3.47	
-26-Sep-25	27-Sep-25	GROCERY_CHAIN_A      SINGAPORE     SG	PURCHASE	Contactless	Settled	2.5	
-26-Sep-25	27-Sep-25	GROCERY_CHAIN_A      SINGAPORE     SG	PURCHASE	Contactless	Settled	11.3	
-25-Sep-25	30-Sep-25	TRANSIT_PROVIDER_A   SINGAPORE     SG	PURCHASE	Contactless	Settled	5.06	
-25-Sep-25	26-Sep-25	MERCHANT_P           SINGAPORE     SG	PURCHASE	Contactless	Settled	8.8	
-25-Sep-25	26-Sep-25	MERCHANT_AA          SINGAPORE     SG	PURCHASE	Contactless	Settled	2.5	
-25-Sep-25	26-Sep-25	MERCHANT_AB          SINGAPORE     SG	PURCHASE	Contactless	Settled	15.8	
-24-Sep-25	29-Sep-25	TRANSIT_PROVIDER_A   SINGAPORE     SG	PURCHASE	Contactless	Settled	2.8	
-24-Sep-25	25-Sep-25	MERCHANT_AC          SINGAPORE     SG	PURCHASE	Contactless	Settled	10	
-23-Sep-25	24-Sep-25	MERCHANT_B           SINGAPORE     SG	PURCHASE	Contactless	Settled	9	
-22-Sep-25	26-Sep-25	TRANSIT_PROVIDER_A   SINGAPORE     SG	PURCHASE	Contactless	Settled	3.78	
-22-Sep-25	25-Sep-25	GROCERY_CHAIN_B      SINGAPORE     SG	PURCHASE	Contactless	Settled	7.41	
-22-Sep-25	24-Sep-25	E_COMMERCE_A          SINGAPORE     SG	PURCHASE	Online/In-App Payment	Settled	5.4	
-22-Sep-25	24-Sep-25	GROCERY_CHAIN_B      SINGAPORE     SG	PURCHASE	Contactless	Settled	1.45	
-22-Sep-25	24-Sep-25	MERCHANT_P           SINGAPORE     SG	PURCHASE	Contactless	Settled	7.2	
-21-Sep-25	25-Sep-25	TRANSIT_PROVIDER_A   SINGAPORE     SG	PURCHASE	Contactless	Settled	3.88	
-21-Sep-25	24-Sep-25	RETAIL_CHAIN_C       SINGAPORE     SG	PURCHASE	Contactless	Settled	252.5	
-20-Sep-25	24-Sep-25	TRANSIT_PROVIDER_A   SINGAPORE     SG	PURCHASE	Contactless	Settled	3.46	
+Card Transaction Details For:,CARD_TYPE_A CARD_ID_001
+Transactions as at:,DATE_001
+,,,,,,,
+Credit Limit:,SGD undefined
+Available Limit:,SGD undefined
+,,,,,,,
+Transaction Date,Transaction Posting Date,Transaction Description,Transaction Type,Payment Type,Transaction Status,Debit Amount,Credit Amount
+22 Oct 25,23 Oct 25,MERCHANT_A           SINGAPORE     SG,PURCHASE,Online/In-App Payment,Settled,12.4,
+21 Oct 25,22 Oct 25,MERCHANT_B           SINGAPORE     SG,PURCHASE,Contactless,Settled,9,
+20 Oct 25,22 Oct 25,MERCHANT_C           SINGAPORE     SG,PURCHASE,Contactless,Settled,4.8,
+20 Oct 25,22 Oct 25,MERCHANT_D           SINGAPORE     SG,PURCHASE,Contactless,Settled,14.7,
+20 Oct 25,22 Oct 25,MERCHANT_E           SINGAPORE     SG,PURCHASE,Contactless,Settled,5.5,
+19 Oct 25,23 Oct 25,TRANSIT_PROVIDER_A   SINGAPORE     SG,PURCHASE,Contactless,Settled,3.78,
+19 Oct 25,22 Oct 25,MERCHANT_F           SINGAPORE     SG,PURCHASE,Contactless,Settled,19.4,
+19 Oct 25,21 Oct 25,MERCHANT_G           SINGAPORE     SG,PURCHASE,Contactless,Settled,28.3,
+19 Oct 25,21 Oct 25,RIDE_HAILING_A       SINGAPORE     SG,PURCHASE,Online/In-App Payment,Settled,25.7,
+19 Oct 25,21 Oct 25,GROCERY_CHAIN_A      SINGAPORE     SG,PURCHASE,Contactless,Settled,9.56,
+18 Oct 25,22 Oct 25,TRANSIT_PROVIDER_A   SINGAPORE     SG,PURCHASE,Contactless,Settled,3.46,
+18 Oct 25,21 Oct 25,MERCHANT_H           SINGAPORE     SG,PURCHASE,Contactless,Settled,70.74,
+18 Oct 25,21 Oct 25,GROCERY_CHAIN_A      SINGAPORE     SG,PURCHASE,Contactless,Settled,0.67,
+17 Oct 25,22 Oct 25,TRANSIT_PROVIDER_A   SINGAPORE     SG,PURCHASE,Contactless,Settled,2.78,
+17 Oct 25,21 Oct 25,MERCHANT_I           SINGAPORE     SG,PURCHASE,Contactless,Settled,4,
+17 Oct 25,18 Oct 25,RIDE_HAILING_A       SINGAPORE     SG,PURCHASE,Online/In-App Payment,Settled,12.3,
+16 Oct 25,17 Oct 25,MERCHANT_J           SINGAPORE     SG,PURCHASE,Online/In-App Payment,Settled,89.8,
+16 Oct 25,16 Oct 25,DIGITAL_SERVICE_A    SERVICE_ID_001 IE,PURCHASE,Online/In-App Payment,Settled,10.08,
+15 Oct 25,21 Oct 25,TRANSIT_PROVIDER_A   SINGAPORE     SG,PURCHASE,Contactless,Settled,2.8,
+15 Oct 25,17 Oct 25,GROCERY_CHAIN_A      SINGAPORE     SG,PURCHASE,Contactless,Settled,1,
+15 Oct 25,16 Oct 25,MERCHANT_K           SINGAPORE     SG,PURCHASE,Contactless,Settled,10.9,
+14 Oct 25,18 Oct 25,TRANSIT_PROVIDER_A   SINGAPORE     SG,PURCHASE,Contactless,Settled,1.4,
+13 Oct 25,17 Oct 25,TRANSIT_PROVIDER_A   SINGAPORE     SG,PURCHASE,Contactless,Settled,5.99,
+13 Oct 25,15 Oct 25,E_COMMERCE_A          SINGAPORE     SG,PURCHASE,Online/In-App Payment,Settled,36,
+13 Oct 25,15 Oct 25,E_COMMERCE_A          SINGAPORE     SG,PURCHASE,Online/In-App Payment,Settled,21.37,
+13 Oct 25,14 Oct 25,MICROMOBILITY_A      SINGAPORE     SG,PURCHASE,Online/In-App Payment,Settled,10,
+12 Oct 25,14 Oct 25,GROCERY_CHAIN_A      SINGAPORE     SG,PURCHASE,Contactless,Settled,5.37,
+11 Oct 25,15 Oct 25,TRANSIT_PROVIDER_A   SINGAPORE     SG,PURCHASE,Contactless,Settled,5.77,
+11 Oct 25,14 Oct 25,TELECOM_A             SINGAPORE     SG,PURCHASE,Online/In-App Payment,Settled,25.46,
+11 Oct 25,13 Oct 25,GROCERY_CHAIN_A      SINGAPORE     SG,PURCHASE,Contactless,Settled,10.24,
+10 Oct 25,14 Oct 25,TRANSIT_PROVIDER_A   SINGAPORE     SG,PURCHASE,Contactless,Settled,1.77,
+10 Oct 25,13 Oct 25,MERCHANT_I           SINGAPORE     SG,PURCHASE,Contactless,Settled,4,
+10 Oct 25,11 Oct 25,MERCHANT_L           SINGAPORE     SG,PURCHASE,Contactless,Settled,19.26,
+10 Oct 25,11 Oct 25,MERCHANT_M           SINGAPORE     SG,PURCHASE,Contactless,Settled,3,
+10 Oct 25,11 Oct 25,RIDE_HAILING_A       SINGAPORE     SG,PURCHASE,Online/In-App Payment,Settled,20,
+9 Oct 25,14 Oct 25,TRANSIT_PROVIDER_A   SINGAPORE     SG,PURCHASE,Contactless,Settled,2.78,
+9 Oct 25,10 Oct 25,MERCHANT_N           SINGAPORE     SG,PURCHASE,Contactless,Settled,11.51,
+9 Oct 25,10 Oct 25,MERCHANT_O           SINGAPORE     SG,PURCHASE,Contactless,Settled,54,
+8 Oct 25,13 Oct 25,TRANSIT_PROVIDER_A   SINGAPORE     SG,PURCHASE,Contactless,Settled,3.78,
+8 Oct 25,9 Oct 25,MERCHANT_P           SINGAPORE     SG,PURCHASE,Contactless,Settled,8.4,
+8 Oct 25,9 Oct 25,MERCHANT_C           SINGAPORE     SG,PURCHASE,Contactless,Settled,17.5,
+7 Oct 25,11 Oct 25,TRANSIT_PROVIDER_A   SINGAPORE     SG,PURCHASE,Contactless,Settled,2.38,
+7 Oct 25,9 Oct 25,E_COMMERCE_A          SINGAPORE     SG,PURCHASE,Online/In-App Payment,Settled,21.37,
+7 Oct 25,8 Oct 25,PAYMENT_PLATFORM_A   SINGAPORE     SG,PURCHASE,Online/In-App Payment,Settled,1.75,
+6 Oct 25,10 Oct 25,TRANSIT_PROVIDER_A   SINGAPORE     SG,PURCHASE,Contactless,Settled,5.08,
+6 Oct 25,9 Oct 25,GROCERY_CHAIN_A      SINGAPORE     SG,PURCHASE,Contactless,Settled,3.66,
+6 Oct 25,8 Oct 25,MERCHANT_Q           SINGAPORE     SG,PURCHASE,Contactless,Settled,10.7,
+5 Oct 25,7 Oct 25,MERCHANT_R            CITY_A        MY MYR,PURCHASE,Contactless,Settled,10.69,
+5 Oct 25,6 Oct 25,MERCHANT_S            CITY_B        MY MYR,PURCHASE,Contactless,Settled,6.03,
+5 Oct 25,6 Oct 25,MERCHANT_T            CITY_C        MY MYR,PURCHASE,Contactless,Settled,5.59,
+5 Oct 25,6 Oct 25,RIDE_HAILING_A        CITY_D        MY MYR,PURCHASE,Online/In-App Payment,Settled,6.87,
+4 Oct 25,6 Oct 25,E_WALLET_A            CITY_B        MY MYR,PURCHASE,Online/In-App Payment,Settled,32.05,
+4 Oct 25,6 Oct 25,E_WALLET_A            CITY_B        MY MYR,PURCHASE,Online/In-App Payment,Settled,96.15,
+4 Oct 25,6 Oct 25,RETAIL_CHAIN_A        CITY_B        MY MYR,PURCHASE,Contactless,Settled,2.37,
+4 Oct 25,6 Oct 25,RETAIL_CHAIN_A        CITY_B        MY MYR,PURCHASE,Contactless,Settled,44.49,
+4 Oct 25,6 Oct 25,MERCHANT_U            CITY_B        MY MYR,PURCHASE,Contactless,Settled,4.6,
+3 Oct 25,7 Oct 25,TRANSIT_PROVIDER_A   SINGAPORE     SG,PURCHASE,Contactless,Settled,2.32,
+3 Oct 25,4 Oct 25,RETAIL_CHAIN_B        CITY_E        MY MYR,PURCHASE,Contactless,Settled,4.79,
+3 Oct 25,4 Oct 25,CONVENIENCE_STORE_A  SINGAPORE     SG,PURCHASE,Contactless,Settled,2.94,
+3 Oct 25,4 Oct 25,MERCHANT_V           SINGAPORE     SG,PURCHASE,Contactless,Settled,11.9,
+2 Oct 25,7 Oct 25,TRANSIT_PROVIDER_A   SINGAPORE     SG,PURCHASE,Contactless,Settled,2.8,
+2 Oct 25,4 Oct 25,GROCERY_CHAIN_A      SINGAPORE     SG,PURCHASE,Contactless,Settled,7.95,
+2 Oct 25,3 Oct 25,CLOUD_SERVICE_A      SINGAPORE     SG,PURCHASE,Online/In-App Payment,Settled,0.71,
+1 Oct 25,6 Oct 25,TRANSIT_PROVIDER_A   SINGAPORE     SG,PURCHASE,Contactless,Settled,1.5,
+1 Oct 25,4 Oct 25,GROCERY_CHAIN_A      SINGAPORE     SG,PURCHASE,Contactless,Settled,9.8,
+1 Oct 25,2 Oct 25,MEDICAL_SERVICE_A    SINGAPORE     SG,PURCHASE,Contactless,Settled,79.15,
+30 Sep 25,4 Oct 25,TRANSIT_PROVIDER_A   SINGAPORE     SG,PURCHASE,Contactless,Settled,4.17,
+30 Sep 25,2 Oct 25,HEALTHCARE_A         SINGAPORE     SG,PURCHASE,Contactless,Settled,130.8,
+30 Sep 25,1 Oct 25,MERCHANT_W           SINGAPORE     SG,PURCHASE,Contactless,Settled,1,
+30 Sep 25,1 Oct 25,PAYMENT_PLATFORM_A   SINGAPORE     SG,PURCHASE,Online/In-App Payment,Settled,6.8,
+29 Sep 25,3 Oct 25,TRANSIT_PROVIDER_A   SINGAPORE     SG,PURCHASE,Contactless,Settled,2.8,
+29 Sep 25,1 Oct 25,INSURANCE_A          SINGAPORE     SG,PURCHASE,Online/In-App Payment,Settled,5000,
+28 Sep 25,2 Oct 25,TRANSIT_PROVIDER_A   SINGAPORE     SG,PURCHASE,Contactless,Settled,4.35,
+28 Sep 25,29 Sep 25,MERCHANT_X           SINGAPORE     SG,PURCHASE,Contactless,Settled,128.77,
+28 Sep 25,29 Sep 25,MERCHANT_Y           SINGAPORE     SG,PURCHASE,Contactless,Settled,41.5,
+27 Sep 25,1 Oct 25,TRANSIT_PROVIDER_A   SINGAPORE     SG,PURCHASE,Contactless,Settled,2.69,
+27 Sep 25,30 Sep 25,MERCHANT_Z           SINGAPORE     SG,PURCHASE,Contactless,Settled,4.7,
+27 Sep 25,29 Sep 25,FINTECH_A            SINGAPORE     SG,PURCHASE,Online/In-App Payment,Settled,7,
+27 Sep 25,29 Sep 25,MEDICAL_SERVICE_A    SINGAPORE     SG,PURCHASE,Contactless,Settled,95.9,
+26 Sep 25,29 Sep 25,GROCERY_CHAIN_B      SINGAPORE     SG,PURCHASE,Contactless,Settled,3.47,
+26 Sep 25,27 Sep 25,GROCERY_CHAIN_A      SINGAPORE     SG,PURCHASE,Contactless,Settled,2.5,
+26 Sep 25,27 Sep 25,GROCERY_CHAIN_A      SINGAPORE     SG,PURCHASE,Contactless,Settled,11.3,
+25 Sep 25,30 Sep 25,TRANSIT_PROVIDER_A   SINGAPORE     SG,PURCHASE,Contactless,Settled,5.06,
+25 Sep 25,26 Sep 25,MERCHANT_P           SINGAPORE     SG,PURCHASE,Contactless,Settled,8.8,
+25 Sep 25,26 Sep 25,MERCHANT_AA          SINGAPORE     SG,PURCHASE,Contactless,Settled,2.5,
+25 Sep 25,26 Sep 25,MERCHANT_AB          SINGAPORE     SG,PURCHASE,Contactless,Settled,15.8,
+24 Sep 25,29 Sep 25,TRANSIT_PROVIDER_A   SINGAPORE     SG,PURCHASE,Contactless,Settled,2.8,
+24 Sep 25,25 Sep 25,MERCHANT_AC          SINGAPORE     SG,PURCHASE,Contactless,Settled,10,
+23 Sep 25,24 Sep 25,MERCHANT_B           SINGAPORE     SG,PURCHASE,Contactless,Settled,9,
+22 Sep 25,26 Sep 25,TRANSIT_PROVIDER_A   SINGAPORE     SG,PURCHASE,Contactless,Settled,3.78,
+22 Sep 25,25 Sep 25,GROCERY_CHAIN_B      SINGAPORE     SG,PURCHASE,Contactless,Settled,7.41,
+22 Sep 25,24 Sep 25,E_COMMERCE_A          SINGAPORE     SG,PURCHASE,Online/In-App Payment,Settled,5.4,
+22 Sep 25,24 Sep 25,GROCERY_CHAIN_B      SINGAPORE     SG,PURCHASE,Contactless,Settled,1.45,
+22 Sep 25,24 Sep 25,MERCHANT_P           SINGAPORE     SG,PURCHASE,Contactless,Settled,7.2,
+21 Sep 25,25 Sep 25,TRANSIT_PROVIDER_A   SINGAPORE     SG,PURCHASE,Contactless,Settled,3.88,
+21 Sep 25,24 Sep 25,RETAIL_CHAIN_C       SINGAPORE     SG,PURCHASE,Contactless,Settled,252.5,
+20 Sep 25,24 Sep 25,TRANSIT_PROVIDER_A   SINGAPORE     SG,PURCHASE,Contactless,Settled,3.46,
