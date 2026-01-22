@@ -1,4 +1,4 @@
-package main
+package dbs
 
 import (
 	"fmt"
@@ -7,8 +7,9 @@ import (
 	gocsv "github.com/JoelLau/go-csv"
 )
 
+// Represents a single line in DBS's credit card statement (csv)
 // NOTE: Row's DebitAmount OR CreditAmount must be 0. One of them MUST have a value.
-type DBSCreditCardRow struct {
+type CreditCardItem struct {
 	TransactionDate        DBSCreditCardDate `csv:"Transaction Date"`         // e.g. "22-Oct-25"
 	TransactionPostingDate DBSCreditCardDate `csv:"Transaction Posting Date"` // e.g. "23-Oct-25"
 	TransactionDescription string            `csv:"Transaction Description"`  // e.g. "SUPER SIMPLE           SINGAPORE     SG"
@@ -18,7 +19,7 @@ type DBSCreditCardRow struct {
 	CreditAmount           string            `csv:"Credit Amount"`            // e.g. ""
 }
 
-const DBSCreditCardDateLayout = "02-Jan-2006"
+const DBSCreditCardDateLayout = "02 Jan 2006"
 
 type DBSCreditCardDate struct{ time.Time }
 

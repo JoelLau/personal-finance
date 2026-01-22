@@ -2,10 +2,13 @@ package main
 
 import (
 	"context"
+	"encoding/csv"
 	"fmt"
 	"io"
 	"log/slog"
 	"os"
+	domain "personal-finance/pkgs/domains"
+	"personal-finance/pkgs/ocbc"
 	"strconv"
 	"strings"
 	"time"
@@ -21,7 +24,7 @@ func main() {
 	slogger := slog.New(slog.NewTextHandler(os.Stderr, &slog.HandlerOptions{AddSource: true, Level: slog.LevelDebug}))
 	slogger.InfoContext(ctx, "initializing...")
 
-	cmd := NewIngestDBSCreditCardCSVCommand(slogger)
+	cmd := NewIngestOCBCAccountStatemtnCSVCommand(slogger)
 	if err := cmd.Run(ctx, os.Args); err != nil {
 		slogger.ErrorContext(ctx, "error running command", slog.Any("error", err))
 		return
@@ -29,7 +32,7 @@ func main() {
 
 }
 
-func NewIngestDBSCreditCardCSVCommand(slogger *slog.Logger) *cli.Command {
+func NewIngestOCBCAccountStatemtnCSVCommand(slogger *slog.Logger) *cli.Command {
 	return &cli.Command{
 		Name:  "ingest",
 		Usage: "parses file",
@@ -37,7 +40,7 @@ func NewIngestDBSCreditCardCSVCommand(slogger *slog.Logger) *cli.Command {
 			&cli.StringFlag{
 				Name:      "file",
 				Aliases:   []string{"f"},
-				Usage:     "path to csv `FILE`, not directory (e.g. path/to/dbs_creditcard.csv)",
+				Usage:     "path to csv `FILE`, not directory (e.g. path/to/ocbc_statement.csv)",
 				TakesFile: true,
 				Required:  true,
 			},
@@ -51,7 +54,7 @@ func NewIngestDBSCreditCardCSVCommand(slogger *slog.Logger) *cli.Command {
 		},
 		Action: func(ctx context.Context, c *cli.Command) error {
 			slogger.InfoContext(ctx,
-				"running ingest dbs credit card csv command",
+				"running ingest ocbc account statements csv command",
 				slog.String("args.file", c.String("file")),
 				slog.String("args.month", c.String("month")),
 			)
@@ -83,61 +86,83 @@ func NewIngestDBSCreditCardCSVCommand(slogger *slog.Logger) *cli.Command {
 
 			// the first X rows contain metadata like the credit card and bank account numbers.
 			// this is sensitive information that we want nothing to do with.
-			if len(table) <= DBSCreditCardCSVSkipXRows {
+			if len(table) <= OCBCAccountStatementCSVSkipXRows {
 				return fmt.Errorf("error parsing file contents - expected more rows in file")
 			}
 
-			csv := table[DBSCreditCardCSVSkipXRows:]
-			rows := make([]string, len(csv))
-			for idx, row := range csv {
-				rows[idx] = strings.Join(row, ",")
+			truncatedTable := table[OCBCAccountStatementCSVSkipXRows:]
+			sb := &strings.Builder{}
+			w := csv.NewWriter(sb)
+			if err := w.WriteAll(truncatedTable); err != nil {
+				fmt.Println("Error writing CSV:", err)
 			}
-			csvStr := (strings.Join(rows, "\n"))
+			csvStr := sb.String()
 
-			var ccRowData []DBSCreditCardRow
-			slogger.InfoContext(ctx, "unmarshalling...", slog.Any("csv", csv), slog.Any("rows", rows))
-			err = gocsv.Unmarshal([]byte(csvStr), &ccRowData)
+			var txRowData []ocbc.OCBCAccountTransactionItem
+			slogger.InfoContext(ctx, "unmarshalling...", slog.Any("truncatedTable", truncatedTable))
+			err = gocsv.Unmarshal([]byte(csvStr), &txRowData)
 			if err != nil {
 				return fmt.Errorf("error unmarshalling csv: %+v", err)
 			}
 
 			slogger.InfoContext(ctx, "processing data...")
-			repo := NewInMemoryAccountingRepository()
-			for idx, row := range ccRowData {
+			repo := domain.NewInMemoryAccountingRepository()
+			for idx, row := range txRowData {
 				slog.DebugContext(ctx, "processing", slog.Int("row #", idx), slog.Any("row", row))
 
-				creditAmount := 0.0
-				if row.CreditAmount != "" {
-					creditAmount, err = strconv.ParseFloat(row.CreditAmount, 64)
+				withdrawalAmount := 0.0
+				if row.WithdrawalsSGD != "" {
+					withdrawalAmount, err = strconv.ParseFloat(strings.ReplaceAll(row.WithdrawalsSGD, ",", ""), 64)
 					if err != nil {
 						return fmt.Errorf("error parsing credit amount: %+v", err)
 					}
 				}
 
-				debitAmount := 0.0
-				if row.DebitAmount != "" {
-					debitAmount, err = strconv.ParseFloat(row.DebitAmount, 64)
+				depositAmount := 0.0
+				if row.DepositsSGD != "" {
+					depositAmount, err = strconv.ParseFloat(strings.ReplaceAll(row.DepositsSGD, ",", ""), 64)
 					if err != nil {
 						return fmt.Errorf("error parsing debit amount: %+v", err)
 					}
 				}
 
-				creditInMicroSGD := int64(creditAmount * 1_000_000)
-				debitInMicroSGD := int64(debitAmount * 1_000_000)
+				withdrawalInMicroSGD := int64(withdrawalAmount * 1_000_000)
+				depositInMicroSGD := int64(depositAmount * 1_000_000)
 
-				err = repo.CreateExpense(ctx, CreateExpenseParams{
-					Name:             row.TransactionDescription,
+				if !(withdrawalInMicroSGD == 0 || depositInMicroSGD == 0) {
+					return fmt.Errorf("transaction (%d, %s) has both withdrawal (%s) and deposit (%s)", idx, row.Description, row.DepositsSGD, row.DepositsSGD)
+				}
+
+				// assume transaction is an expense if there is a withdrawal
+				if withdrawalInMicroSGD > 0 {
+					err = repo.CreateExpense(ctx, domain.CreateExpenseParams{
+						Name:             row.Description,
+						Description:      "",
+						TransactedAt:     row.TransactionDate.Time,
+						CreditInMicroSGD: depositInMicroSGD,
+						DebitInMicroSGD:  withdrawalInMicroSGD,
+					})
+					if err != nil {
+						return fmt.Errorf("error creating expense while processing ocbc account statement row: %+v", err)
+					}
+
+					continue
+				}
+
+				// assume transaction is income if there is a withdrawal
+				err = repo.CreateIncome(ctx, domain.CreateIncomeParams{
+					Name:             row.Description,
 					Description:      "",
 					TransactedAt:     row.TransactionDate.Time,
-					CreditInMicroSGD: creditInMicroSGD,
-					DebitInMicroSGD:  debitInMicroSGD,
+					CreditInMicroSGD: depositInMicroSGD,
+					DebitInMicroSGD:  withdrawalInMicroSGD,
 				})
 				if err != nil {
-					return fmt.Errorf("error creating expense while processing dbs credit card row: %+v", err)
+					return fmt.Errorf("error creating expense while processing ocbc account statement row: %+v", err)
 				}
 			}
 
-			expenses, err := repo.ListExpenses(ctx)
+			expenses, err := repo.ListTransactions(ctx)
 			if err != nil {
 				return fmt.Errorf("error listing expenses: %+v", err)
 			}
@@ -169,4 +194,5 @@ type Nower interface {
 	Now() time.Time
 }
 
-const DBSCreditCardCSVSkipXRows = 6
+// number of rows to skip in ocbc's account statement csv
+const OCBCAccountStatementCSVSkipXRows = 5
