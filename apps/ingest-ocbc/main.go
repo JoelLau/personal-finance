@@ -129,7 +129,7 @@ func NewIngestOCBCAccountStatemtnCSVCommand(slogger *slog.Logger) *cli.Command {
 				withdrawalInMicroSGD := int64(withdrawalAmount * 1_000_000)
 				depositInMicroSGD := int64(depositAmount * 1_000_000)
 
-				if !(withdrawalInMicroSGD == 0 || depositInMicroSGD == 0) {
+				if (withdrawalInMicroSGD == 0) == (depositInMicroSGD == 0) {
 					return fmt.Errorf("transaction (%d, %s) has both withdrawal (%s) and deposit (%s)", idx, row.Description, row.DepositsSGD, row.DepositsSGD)
 				}
 
