@@ -6,6 +6,8 @@ import (
 	"io"
 	"log/slog"
 	"os"
+	"personal-finance/pkgs/dbs"
+	domain "personal-finance/pkgs/domains"
 	"strconv"
 	"strings"
 	"time"
@@ -94,7 +96,7 @@ func NewIngestDBSCreditCardCSVCommand(slogger *slog.Logger) *cli.Command {
 			}
 			csvStr := (strings.Join(rows, "\n"))
 
-			var ccRowData []DBSCreditCardRow
+			var ccRowData []dbs.CreditCardItem
 			slogger.InfoContext(ctx, "unmarshalling...", slog.Any("csv", csv), slog.Any("rows", rows))
 			err = gocsv.Unmarshal([]byte(csvStr), &ccRowData)
 			if err != nil {
@@ -102,7 +104,7 @@ func NewIngestDBSCreditCardCSVCommand(slogger *slog.Logger) *cli.Command {
 			}
 
 			slogger.InfoContext(ctx, "processing data...")
-			repo := NewInMemoryAccountingRepository()
+			repo := domain.NewInMemoryAccountingRepository()
 			for idx, row := range ccRowData {
 				slog.DebugContext(ctx, "processing", slog.Int("row #", idx), slog.Any("row", row))
 
@@ -125,7 +127,7 @@ func NewIngestDBSCreditCardCSVCommand(slogger *slog.Logger) *cli.Command {
 				creditInMicroSGD := int64(creditAmount * 1_000_000)
 				debitInMicroSGD := int64(debitAmount * 1_000_000)
 
-				err = repo.CreateExpense(ctx, CreateExpenseParams{
+				err = repo.CreateExpense(ctx, domain.CreateExpenseParams{
 					Name:             row.TransactionDescription,
 					Description:      "",
 					TransactedAt:     row.TransactionDate.Time,
@@ -137,7 +139,7 @@ func NewIngestDBSCreditCardCSVCommand(slogger *slog.Logger) *cli.Command {
 				}
 			}
 
-			expenses, err := repo.ListExpenses(ctx)
+			expenses, err := repo.ListTransactions(ctx)
 			if err != nil {
 				return fmt.Errorf("error listing expenses: %+v", err)
 			}
