@@ -2,10 +2,13 @@
   "extends": "./tsconfig.json",
   "compilerOptions": {
     "outDir": "../../dist/out-tsc",
-    "module": "commonjs",
+    "module": "esnext",
     "target": "es2016",
     "types": ["jest", "node"],
-    "moduleResolution": "node10"
+    "moduleResolution": "bundler",
+    "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true
   },
   "files": ["src/test-setup.ts"],
   "include": [

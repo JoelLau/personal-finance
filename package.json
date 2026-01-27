@@ -4,10 +4,10 @@
   "license": "GNUv3",
   "scripts": {
     "nx": "nx",
-    "e2e": "nx e2e web-ui-e2e"
-    "lint": "nx lint web-ui-e2e"
+    "e2e": "nx e2e web-ui-e2e",
+    "lint": "nx lint web-ui-e2e",
     "serve": "nx serve web-ui",
-    "test": "nx test web-ui",
+    "test": "nx test web-ui"
   },
   "private": true,
   "dependencies": {
