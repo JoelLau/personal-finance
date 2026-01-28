@@ -1,1 +1,119 @@
-<p>dashboard-page works!</p>
+<div data-testid="dashboard-page">
+  <header>
+    <h1>Finance Dashboard</h1>
+    <p>Track your income, expenses, and financial health</p>
+  </header>
+  <form data-testid="daterange-selector">
+    <label for="daterange-month">
+      <input type="radio" id="daterange-month" checked />
+      Month
+    </label>
+    <label for="daterange-year">
+      <input type="radio" id="daterange-year" disabled />
+      Year
+    </label>
+    <label for="daterange-month">
+      <input type="radio" id="daterange-month" disabled />
+      Custom
+    </label>
+  </form>
+  <section id="highlights-section">
+    <div class="card">
+      <div class="card-content">
+        <h4>Total Income</h4>
+        <p>$6,425.00</p>
+        <p>+1.2% from last month</p>
+      </div>
+      <div class="card-icon"></div>
+    </div>
+    <div class="card">
+      <div class="card-content">
+        <h4>Total Expenses</h4>
+        <p>$2,850.20</p>
+        <p>12.3% from last month</p>
+      </div>
+      <div class="card-icon"></div>
+    </div>
+    <div class="card">
+      <div class="card-content">
+        <h4>Net Balance</h4>
+        <p>$3,574.80</p>
+        <p>This month</p>
+      </div>
+      <div class="card-icon"></div>
+    </div>
+    <div class="card">
+      <div class="card-content">
+        <h4>Savings Rate</h4>
+        <p>55.6%</p>
+        <p>+3.1% from last month</p>
+      </div>
+      <div class="card-icon"></div>
+    </div>
+  </section>
+  <form id="tab-selector">
+    <label for="tabchoice-overview">
+      <input type="radio" id="tabchoice-overview" checked />
+      Overview
+    </label>
+    <label for="tabchoice-expense">
+      <input type="radio" id="tabchoice-expenses" disabled />
+      Expenses
+    </label>
+    <label for="tabchoice-accounts">
+      <input type="radio" id="tabchoice-accounts" disabled />
+      Accounts
+    </label>
+    <label for="tabchoice-transactions">
+      <input type="radio" id="tabchoice-transactions" disabled />
+      Transactions
+    </label>
+  </form>
+  <section id="tab-overview">
+    <section id="income-vs-expenses">
+      <header>Income vs Expenses</header>
+      <p>
+        (show line graph comparing month-to-month income and expenses - 2 lines)
+      </p>
+    </section>
+    <section id="expense-breakdown">
+      <header>Expense Breakdown</header>
+      <div class="flex bla bla 2 columns">
+        <div class="left-column">
+          <p>donut chart</p>
+        </div>
+        <div class="right-column">
+          <p>(horizontal bar chart showing amount spent on each category)</p>
+        </div>
+      </div>
+    </section>
+    <section id="transaction-history">
+      <div>
+        <h3>Transaction History</h3>
+        <form id="transaction-history-search">
+          <input type="text" placeholder="Search Transactions ..." />
+        </form>
+      </div>
+      <table class="data-table sortable filterable">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Description</th>
+            <th>Account</th>
+            <th>Debit</th>
+            <th>Credit</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>2025-01-25</td>
+            <td>Sheng Siong Supermarket xxxx</td>
+            <td>Expenses::Groceries</td>
+            <td>$156.42</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </section>
+</div>
