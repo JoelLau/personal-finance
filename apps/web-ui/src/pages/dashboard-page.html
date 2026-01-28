@@ -1,19 +1,42 @@
-<div data-testid="dashboard-page">
+<div
+  data-testid="dashboard-page"
+  class="min-h-full px-4 sm:px-6 lg:px-8 py-8 flex flex-col gap-8"
+>
   <header>
-    <h1>Finance Dashboard</h1>
-    <p>Track your income, expenses, and financial health</p>
+    <h1 class="text-3xl bold">Finance Dashboard</h1>
+    <p class="text-lg text-gray-500">
+      Track your income, expenses, and financial health
+    </p>
   </header>
-  <form data-testid="daterange-selector">
-    <label for="daterange-month">
-      <input type="radio" id="daterange-month" checked />
+  <form
+    data-testid="daterange-selector"
+    class="self-start inline-flex border-2 border-gray-200 rounded-md overflow-hidden p-0.5 bg-gray-200"
+  >
+    <label
+      for="daterange-month"
+      class="flex-1 basis-0 rounded-md px-3 py-2 text-sm font-semibold text-center whitespace-nowrap cursor-pointer bg-gray-200 hover:bg-gray-800/20 has-checked:bg-white"
+    >
+      <input
+        type="radio"
+        id="daterange-month"
+        name="range"
+        class="hidden"
+        checked
+      />
       Month
     </label>
-    <label for="daterange-year">
-      <input type="radio" id="daterange-year" disabled />
+    <label
+      for="daterange-year"
+      class="flex-1 basis-0 rounded-md px-5 py-2 text-sm font-semibold text-center whitespace-nowrap cursor-pointer bg-gray-200 hover:bg-gray-800/20 has-checked:bg-white"
+    >
+      <input type="radio" id="daterange-year" name="range" class="hidden" />
       Year
     </label>
-    <label for="daterange-month">
-      <input type="radio" id="daterange-month" disabled />
+    <label
+      for="daterange-custom"
+      class="flex-1 basis-0 rounded-md px-3 py-2 text-sm font-semibold text-center whitespace-nowrap cursor-pointer bg-gray-200 hover:bg-gray-800/20 has-checked:bg-white"
+    >
+      <input type="radio" id="daterange-custom" name="range" class="hidden" />
       Custom
     </label>
   </form>
