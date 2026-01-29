@@ -1,0 +1,189 @@
+<div
+  id="dashboard-page"
+  class="min-h-full px-4 sm:px-6 lg:px-8 py-8 flex flex-col gap-8"
+>
+  <header>
+    <h1 class="text-3xl bold">Finance Dashboard</h1>
+    <p class="text-lg text-gray-500">
+      Track your income, expenses, and financial health
+    </p>
+  </header>
+  <form
+    id="daterange-selector"
+    class="self-start inline-flex border-2 border-gray-200 rounded-md overflow-hidden p-0.5 bg-gray-200"
+  >
+    <label
+      for="daterange-month"
+      class="flex-1 basis-0 px-5 py-2 text-sm font-semibold text-center whitespace-nowrap cursor-pointer bg-gray-200 hover:bg-gray-800/20 has-checked:bg-white first:px-3 first:rounded-l-md first:rounded-r-none last:px-3 last:rounded-r-md last:rounded-l-none"
+    >
+      <input
+        type="radio"
+        id="daterange-month"
+        name="range"
+        class="hidden"
+        checked
+      />
+      Month
+    </label>
+    <label
+      for="datarange-year"
+      class="flex-1 basis-0 px-5 py-2 text-sm font-semibold text-center whitespace-nowrap cursor-pointer bg-gray-200 hover:bg-gray-800/20 has-checked:bg-white first:px-3 first:rounded-l-md first:rounded-r-none last:px-3 last:rounded-r-md last:rounded-l-none"
+    >
+      <input type="radio" id="datarange-year" name="range" class="hidden" />
+      Year
+    </label>
+    <label
+      for="daterange-custom"
+      class="flex-1 basis-0 px-5 py-2 text-sm font-semibold text-center whitespace-nowrap cursor-pointer bg-gray-200 hover:bg-gray-800/20 has-checked:bg-white first:px-3 first:rounded-l-md first:rounded-r-none last:px-3 last:rounded-r-md last:rounded-l-none"
+    >
+      <input type="radio" id="daterange-custom" name="range" class="hidden" />
+      Custom
+    </label>
+  </form>
+  <section id="highlights-section" class="flex flex-row gap-4">
+    <div class="card p-4 shadow-sm flex-1 basis-0 rounded-lg">
+      <div class="card-content flex flex-col gap-1">
+        <h4 class="card-title text-gray-600 bold mb-2">Total Income</h4>
+        <p class="card-highlight text-extrabold text-green-600 text-3xl">
+          {{ 6425 | currency: 'SGD' : 'symbol-narrow' : '0.2-2' }}
+        </p>
+        <p class="card-subtext text-green-600 text-md">+1.2% from last month</p>
+      </div>
+      <div class="card-icon"></div>
+    </div>
+    <div class="card p-4 shadow-sm flex-1 basis-0 rounded-lg">
+      <div class="card-content flex flex-col gap-1">
+        <h4 class="card-title text-gray-600 bold mb-2">Total Expenses</h4>
+        <p class="card-highlight text-extrabold text-red-600 text-3xl">
+          $2,850.20
+        </p>
+        <p class="card-subtext text-red-600 text-md">12.3% from last month</p>
+      </div>
+      <div class="card-icon"></div>
+    </div>
+    <div class="card p-4 shadow-sm flex-1 basis-0 rounded-lg">
+      <div class="card-content flex flex-col gap-1">
+        <h4 class="card-title text-gray-600 bold mb-2">Net Balance</h4>
+        <p class="card-highlight text-extrabold text-3xl">$3,574.80</p>
+        <p class="card-subtext text-md">This month</p>
+      </div>
+      <div class="card-icon"></div>
+    </div>
+    <div class="card p-4 shadow-sm flex-1 basis-0 rounded-lg">
+      <div class="card-content flex flex-col gap-1">
+        <h4 class="card-title text-gray-600 bold mb-2">Savings Rate</h4>
+        <p class="card-highlight text-extrabold text-green-600 text-3xl">
+          55.6%
+        </p>
+        <p class="card-subtext text-green-600 text-md">+3.1% from last month</p>
+      </div>
+      <div class="card-icon"></div>
+    </div>
+  </section>
+  <form
+    id="tab-selector"
+    class="self-start inline-flex border-2 border-gray-200 rounded-md overflow-hidden p-0.5"
+  >
+    <label
+      for="tabchoice-overview"
+      class="flex-1 text-gray-400 has-checked:text-inherit hover:text-gray-500 basis-0 px-5 py-2 text-sm font-semibold text-center whitespace-nowrap cursor-pointer first:px-3 first:rounded-l-md first:rounded-r-none last:px-3 last:rounded-r-md last:rounded-l-none"
+    >
+      <input
+        type="radio"
+        id="tabchoice-overview"
+        name="range"
+        class="hidden"
+        checked
+      />
+      Overview
+    </label>
+    <label
+      for="tabchoice-expenses"
+      class="flex-1 text-gray-500 has-checked:text-inherit hover:text-gray-500 basis-0 px-5 py-2 text-sm font-semibold text-center whitespace-nowrap cursor-pointer first:px-3 first:rounded-l-md first:rounded-r-none last:px-3 last:rounded-r-md last:rounded-l-none"
+    >
+      <input type="radio" id="tabchoice-expenses" name="range" class="hidden" />
+      Expenses
+    </label>
+    <label
+      for="tabchoice-accounts"
+      class="flex-1 text-gray-500 has-checked:text-inherit hover:text-gray-500 basis-0 px-5 py-2 text-sm font-semibold text-center whitespace-nowrap cursor-pointer first:px-3 first:rounded-l-md first:rounded-r-none last:px-3 last:rounded-r-md last:rounded-l-none"
+    >
+      <input type="radio" id="tabchoice-accounts" name="range" class="hidden" />
+      Accounts
+    </label>
+    <label
+      for="tabchoice-transactions"
+      class="flex-1 text-gray-500 has-checked:text-inherit hover:text-gray-500 basis-0 px-5 py-2 text-sm font-semibold text-center whitespace-nowrap cursor-pointer first:px-3 first:rounded-l-md first:rounded-r-none last:px-3 last:rounded-r-md last:rounded-l-none"
+    >
+      <input
+        type="radio"
+        id="tabchoice-transactions"
+        name="range"
+        class="hidden"
+      />
+      Transactions
+    </label>
+  </form>
+  <section id="tab-overview" class="grid">
+    <section class="card p-4 shadow-sm flex-1 basis-0 rounded-lg">
+      <div id="income-vs-expenses" class="card-content flex flex-col gap-1">
+        <h4 class="card-title text-inherit bold mb-2">Income vs Expenses</h4>
+        <p class="text-sm text-gray-400">
+          (show line graph comparing month-to-month income and expenses - 2
+          lines)
+        </p>
+      </div>
+    </section>
+    <section
+      id="expense-breakdown"
+      class="card p-4 shadow-sm flex-1 basis-0 rounded-lg"
+    >
+      <div class="card-content flex flex-col gap-1">
+        <h4 class="card-title text-inherit bold mb-2">Expense Breakdown</h4>
+        <div class="flex bla bla 2 columns text-sm text-gray-400">
+          <div class="left-column">
+            <p>donut chart</p>
+          </div>
+          <div class="right-column">
+            <p>(horizontal bar chart showing amount spent on each category)</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section
+      id="transaction-history"
+      class="card p-4 shadow-sm flex-1 basis-0 rounded-lg"
+    >
+      <div class="card-content flex flex-col gap-1">
+        <div class="card-title text-inherit mb-2">
+          <h4 class="font-bold">Transaction History</h4>
+          <form id="transaction-history-search">
+            <input type="text" placeholder="Search Transactions ..." />
+          </form>
+        </div>
+        <div class="flex bla bla 2 columns min-w-full">
+          <table class="data-table sortable filterable min-w-full">
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Description</th>
+                <th>Account</th>
+                <th>Debit</th>
+                <th>Credit</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>2025-01-25</td>
+                <td>Sheng Siong Supermarket xxxx</td>
+                <td>Expenses::Groceries</td>
+                <td>$156.42</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  </section>
+</div>
