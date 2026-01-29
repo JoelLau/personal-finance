@@ -1,0 +1,32 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "baseUrl": "./src",
+    "noPropertyAccessFromIndexSignature": true,
+    "experimentalDecorators": true,
+    "moduleResolution": "bundler",
+    "module": "esnext",
+    "paths": {
+      "@components/*": ["app/components/*"],
+      "@pages/*": ["app/pages/*"],
+      "@services/*": ["app/services/*"],
+      "@shared/*": ["app/shared/*"]
+    }
+  },
+  "angularCompilerOptions": {
+    "enableI18nLegacyMessageIdFormat": false,
+    "strictInjectionParameters": true,
+    "strictInputAccessModifiers": true,
+    "strictTemplates": true
+  },
+  "files": [],
+  "include": [],
+  "references": [
+    {
+      "path": "./tsconfig.app.json"
+    },
+    {
+      "path": "./tsconfig.spec.json"
+    }
+  ]
+}
